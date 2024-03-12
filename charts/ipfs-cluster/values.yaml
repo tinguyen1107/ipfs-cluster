@@ -1,33 +1,33 @@
 ipfsImage:
   repo: ipfs/go-ipfs
-  tag: v0.10.0
+  tag: v0.27.0
 
 ipfsClusterImage:
   repo: ipfs/ipfs-cluster
-  tag: v0.14.1
+  tag: v1.0.8
 
 #### secretes examples #####
 #https://cluster.ipfs.io/documentation/guides/k8s/
 
 #od  -vN 32 -An -tx1 /dev/urandom | tr -d ' \n'
-clusterSecret: 1ec8276f98cf47c16acfd9bf39fca38f8e3cfcbe229530a7ba9f08ef9757c439
+clusterSecret: 977be7188a86d0f431760ef25b0734a621a8e1dd697380daf0daebc0d162c56d
 
 #go get github.com/whyrusleeping/ipfs-key
 #ipfs-key --type Ed25519 | base64
-bootstrapPeerPrivateKey: CAESQKyMCUbsfSRq8NBOFQOxv9uvgXm1zvSHyThj3AQV6UBHvTJ+TbTrk1Z6639aE6FOSMGbAG+besQOtk5SPsP2Gxo=
-bootstrapPeerId: 12D3KooWNYut1XL31b4KUnCZmC8Mu7WqGn6QdwnptGpS5tnhSttR
+bootstrapPeerPrivateKey: CAESQKlZsSkQpuQBckidLmnnsR/Wz/wFq/4HIPEUq+t1wxi9mIF2INgIv0sYAdn9ZqUN8hgDTqC2e+1PAVVcU6K5ip8=
+bootstrapPeerId: 12D3KooWL5gdo9EBTvSYEPB6kCiPQdpt3Z83m7FEiPXCkoEMmLjp
 
-clusterRestApiId: 12D3KooWMfXzp2nmNrb7DM4PETYZbaKALnrnwiqnhvrUC66KyYrb
-clusterRestApiPrivateKey: CAESQEmvGJbMboEibpcWCTKOtDYU2eEyyHLN9gDdJli6Z2tksAkhFWNx0Fk3vOlwLIitE2rfGtIj61Ovla/mHC42Plg=
-clusterRestApiBasicAuth: "w3f:password"
+clusterRestApiId: 12D3KooWFpMypz2WsqsXY1Swcfqz1AEkfrCn77D8T2KqE9GjCokt
+clusterRestApiPrivateKey: CAESQN70CP4ufnEBkdpA7ndTixx/kP+kBkc/6s0mi6HcM475WSXoo4jo35+Lu0sRgBBZyPRuLonumff6aVn8Ojh+caE=
+clusterRestApiBasicAuth: "ipfs:ipfs-pass"
 
 clusterCRDTtrustedPeers: "12D3KooWNYut1XL31b4KUnCZmC8Mu7WqGn6QdwnptGpS5tnhSttR,12D3KooWNYut1XL31b4KUnCZmC8Mu7WqGn6QdwnptGpS5tnhSttR"
 ##################
 
 replicaCount: 1
 
-domain: ipfs.w3f.community
-httpDomain: ipfs-gateway.w3f.community
+domain: ipfs-cluster.rep.run
+httpDomain: ipfs-cluster.rep.run
 
 persistence:
   enabled: true
